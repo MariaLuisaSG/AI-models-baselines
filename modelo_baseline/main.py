@@ -28,7 +28,6 @@ def main():
         model = train(model, X_train, y_train)
         metrics = evaluate(model, X_test, y_test)
         resultados[name] = metrics
-    for name, metrics in resultados.items():
         print(f"{name}: {metrics}")
         plot_confusion_matrix(model, X_test, y_test)
 
